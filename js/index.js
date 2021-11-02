@@ -1,25 +1,11 @@
 const container = document.querySelector(".container");
 const dataBlock = document.querySelector(".dataBlock");
 
-function deepIterator(target) {
-  if (typeof target === "object") {
-    for (const key in target) {
-      if (target.hasOwnProperty("subData")) {
-        const subDataId = target.id;
-        const subData = document.querySelector(`.subdata${subDataId}`);
-        subData.innerHTML = `<li>asdsa</li>`;
-        console.log(target);
-      }
-      deepIterator(target[key]);
-    }
-  } else {
-    // console.log(target);
-  }
-}
 function randomColor() {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   return randomColor;
 }
+
 let arr = [];
 function iterateJson(obj) {
   for (prop in obj) {
